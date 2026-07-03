@@ -1,0 +1,6 @@
+export {default as HeroSection} from './heroSection'
+export {default as BestServices} from './bestServices'
+export {default as Destination} from './destination'
+export {default as Booking} from './booking'
+export {default as Country} from './country'
+export {default as Information} from './information'
