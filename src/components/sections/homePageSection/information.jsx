@@ -4,9 +4,9 @@ import { Mail } from 'lucide-react'
 const Information = () => {
   return (
     <div className="mx-4 sm:mx-8 lg:mx-36 mb-10 sm:mb-16 lg:mb-20 mt-15 ">
-      <div className="flex flex-col items-center justify-center gap-8 p-8 sm:p-12 lg:p-16 bg-gray6 rounded-tl-[110px] rounded-tr-[50px] sm:rounded-tr-[50px] lg:rounded-tr-[30px] rounded-br-[20px] rounded-bl-[20px] max-w-360 mx-auto">
+      <div className="flex flex-col items-center justify-center gap-8 p-8 sm:p-12 lg:p-16 bg-gray6-20 rounded-tl-[110px] rounded-tr-[50px] sm:rounded-tr-[50px] lg:rounded-tr-[30px] rounded-br-[20px] rounded-bl-[20px] max-w-360 mx-auto">
 
-        <h2 className="text-gray4 text-2xl sm:text-3xl lg:text-4xl font-bold text-center leading-snug max-w-3xl">
+        <h2 className="text-gray2 text-2xl sm:text-3xl lg:text-4xl font-bold text-center leading-snug max-w-3xl">
           Subscribe to get information, latest news and other interesting offers about Jadoo
         </h2>
 
@@ -21,7 +21,7 @@ const Information = () => {
             />
           </div>
 
-          <button className="bg-linear-to-r from-primary-start to-primary-end transition-all text-white font-semibold rounded-xl px-8 py-4 whitespace-nowrap">
+          <button className="bg-linear-to-r from-primary-start to-primary-end transition-all text-white text-[17px] font-semibold rounded-xl px-8 py-4 whitespace-nowrap">
             Subscribe
           </button>
 

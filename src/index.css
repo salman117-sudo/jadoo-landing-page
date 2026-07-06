@@ -14,9 +14,12 @@
   --color-gray3: #5E6282;
   --color-gray4: #14183E;
   --color-gray5: #1E1D4C;
-  --color-gray6: #DFD7F9;
+  --color-light: #DFD7F9;
+  --color-gray6-20: #DFD7F933; /* ~20% opacity */
   --color-primary-start: #FF946D;
   --color-primary-end: #FF7D68;
+  --color-gray7:#84829A;
+  --color-blue:#8A79DF;
   
 
   --font-volkhov: "Volkhov", serif;

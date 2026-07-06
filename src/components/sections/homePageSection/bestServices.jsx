@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const BestServices = () => {
   const services = [
@@ -6,27 +6,26 @@ const BestServices = () => {
       img: "/homePage/bestService/Group 48.svg",
       title: "Calculated Weather",
       desc: "Built Wicket longer admire do barton vanity itself do in it.",
-      active: false,
     },
     {
       img: "/homePage/bestService/Group 51.svg",
       title: "Best Flights",
       desc: "Engrossed listening. Park gate sell they west hard for the.",
-      active: true,
     },
     {
       img: "/homePage/bestService/Group 50.svg",
       title: "Local Events",
       desc: "Barton vanity itself do in it. Preferred to men it engrossed listening.",
-      active: false,
     },
     {
       img: "/homePage/bestService/Group 49.svg",
       title: "Customization",
       desc: "We deliver outsourced aviation services for military customers.",
-      active: false,
     },
   ];
+
+  // default active card = index 1 (Best Flights)
+  const [activeIndex, setActiveIndex] = useState(1);
 
   return (
     <section className="w-full py-24">
@@ -37,22 +36,23 @@ const BestServices = () => {
           <p className="uppercase text-gray3 font-semibold text-lg">
             Category
           </p>
-
           <h2 className="volkhov text-gray4 text-4xl md:text-5xl font-bold mt-3">
             We Offer Best Services
           </h2>
         </div>
 
         {/* Cards */}
-        <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 justify-items-center">
 
           {services.map((service, index) => (
             <div
               key={index}
+              onMouseEnter={() => setActiveIndex(index)}
+              onMouseLeave={() => setActiveIndex(1)}
               className={`w-full max-w-70 min-h-80 rounded-[36px] px-8 py-10 text-center flex flex-col items-center transition-all duration-300 ${
-                service.active
+                activeIndex === index
                   ? "bg-white shadow-[0_25px_60px_rgba(0,0,0,0.12)]"
-                  : "hover:bg-white hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]"
+                  : ""
               }`}
             >
               <img
@@ -60,11 +60,9 @@ const BestServices = () => {
                 alt={service.title}
                 className="w-20 h-20 object-contain"
               />
-
               <h3 className="mt-8 text-[22px] font-semibold text-gray5 font-open-sans">
                 {service.title}
               </h3>
-
               <p className="mt-5 text-[16px] leading-9 text-gray3">
                 {service.desc}
               </p>
